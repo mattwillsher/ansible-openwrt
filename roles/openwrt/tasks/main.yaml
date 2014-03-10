@@ -1,0 +1,5 @@
+---
+ - name: Checkout attitude_adjustment
+   subversion: repo=svn://svn.openwrt.org/openwrt/branches/attitude_adjustment dest=~/attitude_adjustment
+ - name: Quilt configuration
+   copy: src=quiltrc dest=~/.quiltrc

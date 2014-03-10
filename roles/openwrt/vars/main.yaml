@@ -1,0 +1,13 @@
+---
+build_packages:
+  - build-essential
+  - subversion
+  - git-core
+  - libncurses5-dev
+  - zlib1g-dev
+  - gawk
+  - flex
+  - quilt
+  - libssl-dev
+  - xsltproc
+  - libxml-parser-perl

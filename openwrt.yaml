@@ -1,0 +1,24 @@
+---
+ - hosts: all
+   sudo: true
+   vars:
+     build_packages:
+      - build-essential
+      - subversion
+      - git-core
+      - libncurses5-dev
+      - zlib1g-dev
+      - gawk
+      - flex
+      - quilt
+      - libssl-dev
+      - xsltproc
+      - unzip
+      - libxml-parser-perl
+   tasks:
+    - name: Install build requirements
+      apt: pkg={{ item }} state=present update_cache=true
+      with_items: build_packages
+ - hosts: all
+   roles:
+    - openwrt
